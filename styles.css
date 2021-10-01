@@ -38,3 +38,7 @@ tr td:first-child {
 tr td:last-child{
     border-right: 1px dotted red;
 }
+
+.red-background {
+    background-color: red;
+  }

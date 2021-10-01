@@ -159,6 +159,70 @@
           <div> This page was created by John. All Rights Reserved 2021</div>
           <div> Address: Newcastle upon Tyne, United Kingdom</div>
       </footer>
+
+      <script>
+          // DOM
+
+      // 31) Get element with ID "container" from the page
+      const container = document.getElementById("container");
+      // 32) Get every "td" from the page
+      const tds = document.querySelectorAll("td");
+      // 33) Create a cycle that prints the text inside every td of the page
+      tds.forEach((td) => {
+        td.innerText = "text";
+      });
+      // 34) Write a function to change the heading of the page
+      const changeH1 = function (content) {
+        const h1 = document.querySelector("h1");
+        h1.innerText = content;
+      };
+      changeH1("new text");
+      // 35) Write a function to add an extra row to the table
+      const addRow = function () {
+        const tbody = document.querySelector("tbody");
+        const tr = document.createElement("tr");
+        for (let i = 0; i < 5; i++) {
+          const td = document.createElement("td");
+          td.innerText = i + 1;
+          tr.appendChild(td);
+        }
+        tbody.appendChild(tr);
+      };
+      addRow();
+      // 36) Write a function to add the class "test" to each row in the table
+      const addClassToRow = function () {
+        const trs = document.querySelectorAll("tr");
+        trs.forEach((tr) => {
+          tr.classList.add("test");
+        });
+      };
+      // 37) Write a function to add a red background to every link in the page
+      const addRedBackground = function () {
+        const links = document.querySelectorAll("a");
+        links.forEach((link) => {
+          link.classList.add("red-background");
+        });
+      };
+      addRedBackground();
+      // 38) Console log "Page loaded" when the page is correctly loaded
+      window.onload = function () {
+        console.log("Page loaded");
+      };
+      // 39) Write a function to add new items to a UL
+      const addLi = function () {
+        const ul = document.querySelector("ul");
+        const li = document.createElement("li");
+        li.innerText = "new list item";
+        ul.appendChild(li);
+      };
+      addLi();
+      // 40) Write a function to empty a list
+      const emptyList = function () {
+        const ul = document.querySelector("ul");
+        ul.innerHTML = "";
+      };
+      emptyList();
+      </script>
       
 
   </body>
