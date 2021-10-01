@@ -165,18 +165,22 @@
 
       // 31) Get element with ID "container" from the page
       const container = document.getElementById("container");
+
       // 32) Get every "td" from the page
       const tds = document.querySelectorAll("td");
+
       // 33) Create a cycle that prints the text inside every td of the page
       tds.forEach((td) => {
-        td.innerText = "text";
+        td.innerText = "text printed";
       });
+
       // 34) Write a function to change the heading of the page
       const changeH1 = function (content) {
         const h1 = document.querySelector("h1");
         h1.innerText = content;
       };
       changeH1("This is a new Header");
+
       // 35) Write a function to add an extra row to the table
       const addRow = function () {
         const tbody = document.querySelector("tbody");
@@ -189,6 +193,7 @@
         tbody.appendChild(tr);
       };
       addRow();
+
       // 36) Write a function to add the class "test" to each row in the table
       const addClassToRow = function () {
         const trs = document.querySelectorAll("tr");
@@ -196,6 +201,7 @@
           tr.classList.add("test");
         });
       };
+
       // 37) Write a function to add a red background to every link in the page
       const addRedBackground = function () {
         const links = document.querySelectorAll("a");
@@ -204,10 +210,12 @@
         });
       };
       addRedBackground();
+
       // 38) Console log "Page loaded" when the page is correctly loaded
       window.onload = function () {
         console.log("Page loaded");
       };
+      
       // 39) Write a function to add new items to a UL
       const addLi = function () {
         const ul = document.querySelector("ul");
@@ -216,6 +224,7 @@
         ul.appendChild(li);
       };
       addLi();
+
       // 40) Write a function to empty a list
       const emptyList = function () {
         const ul = document.querySelector("ul");
@@ -235,7 +244,7 @@
           };
         });
       };
-      alertUrl();
+      alertUrl("https://google.com");
 
       // 42) Add a button to hide every image on the page
       const hideImages = function () {
@@ -280,7 +289,7 @@
 
         alert(sum);
       };
-      sumNumbers();
+      //sumNumbers();
 
       // 45) Delete the last letter from the title each time the user clicks on it
       const deleteLastCharacter = function () {
@@ -321,10 +330,10 @@
         const cells = document.querySelectorAll("td");
         cells.forEach((td) => {
           td.onmouseenter = function (e) {
-            e.target.classList.add("border-pink");
+            e.target.classList.add("pink-border");
           };
           td.onmouseleave = function (e) {
-            e.target.classList.remove("border-pink");
+            e.target.classList.remove("pink-border");
           };
         });
       };
