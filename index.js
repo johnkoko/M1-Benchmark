@@ -93,7 +93,7 @@ let randomNumbers = [];
         return sum1 >= sum2 ? sum1 : sum2;
       }
 
-      console.log(returnLargestSum([100, 999], [10000, 2, 3, 4]));
+      console.log(returnLargestSum([10, 19], [1, 3, 3, 4]));
 
 
 
