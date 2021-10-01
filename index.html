@@ -222,6 +222,116 @@
         ul.innerHTML = "";
       };
       emptyList();
+
+
+// EXTRA
+
+      // 41) Add an eventListener to alert when the mouse is over a link, displaying the URL
+      const alertUrl = function () {
+        const links = document.querySelectorAll("a");
+        links.forEach((link) => {
+          link.onmouseenter = function (e) {
+            alert(e.target.href);
+          };
+        });
+      };
+      alertUrl();
+
+      // 42) Add a button to hide every image on the page
+      const hideImages = function () {
+        const btn = document.createElement("button");
+        btn.innerText = "Hide images";
+        btn.onclick = function () {
+          const imgs = document.querySelectorAll("img");
+          imgs.forEach((img) => {
+            img.classList.add("d-none");
+          });
+        };
+        const body = document.querySelector("body");
+        body.appendChild(btn);
+      };
+      hideImages();
+
+      // 43) Add a button to hide and show the table from the page
+      const toggleTable = function () {
+        const btn = document.createElement("button");
+        btn.innerText = "Toggle table";
+        btn.onclick = function () {
+          const table = document.querySelector("table");
+          table.classList.toggle("d-none");
+        };
+
+        const body = document.querySelector("body");
+        body.appendChild(btn);
+      };
+      toggleTable();
+
+      // 44) Write a function to sum every number inside the TD (if the content is numeric)
+      const sumNumbers = function () {
+        const tds = document.querySelectorAll("td");
+        let sum = 0;
+        tds.forEach((td) => {
+          const toNumber = parseInt(td.innerText);
+          const isNotNumeric = isNaN(toNumber);
+          if (!isNotNumeric) {
+            sum += toNumber;
+          }
+        });
+
+        alert(sum);
+      };
+      sumNumbers();
+
+      // 45) Delete the last letter from the title each time the user clicks on it
+      const deleteLastCharacter = function () {
+        const h1 = document.querySelector("h1");
+        h1.onclick = function (e) {
+          h1.innerText = h1.innerText.substring(0, h1.innerText.length - 1);
+        };
+      };
+      deleteLastCharacter();
+
+      // 46) Change a single TD background color when the user clicks on it
+      const changeTdBackgroundColor = function () {
+        const tds = document.querySelectorAll("td");
+        tds.forEach((td) => {
+          td.onclick = function (e) {
+            e.target.classList.toggle("bg-red");
+          };
+        });
+      };
+      changeTdBackgroundColor();
+
+      // 47) Add a button DELETE, on click it should delete a random TD from the page
+      const deleteRandom = function () {
+        const btn = document.createElement("button");
+        btn.innerText = "Delete random";
+        btn.onclick = function () {
+          const tds = document.querySelectorAll("td");
+          const random = Math.floor(Math.random() * tds.length);
+          tds[random].remove();
+        };
+        const body = document.querySelector("body");
+        body.appendChild(btn);
+      };
+      deleteRandom();
+
+      // 48) Add a pink border to a cell when the mouse is over it
+      const addPinkBorder = function () {
+        const cells = document.querySelectorAll("td");
+        cells.forEach((td) => {
+          td.onmouseenter = function (e) {
+            e.target.classList.add("border-pink");
+          };
+          td.onmouseleave = function (e) {
+            e.target.classList.remove("border-pink");
+          };
+        });
+      };
+
+
+
+
       </script>
       
 
