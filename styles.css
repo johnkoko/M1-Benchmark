@@ -39,6 +39,14 @@ tr td:last-child{
     border-right: 1px dotted red;
 }
 
+.image-hid {
+    display: none;
+  }
+
 .red-background {
     background-color: red;
+  }
+
+  .border-pink {
+    border-color: pink;
   }

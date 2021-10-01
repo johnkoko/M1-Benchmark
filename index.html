@@ -176,7 +176,7 @@
         const h1 = document.querySelector("h1");
         h1.innerText = content;
       };
-      changeH1("new text");
+      changeH1("This is a new Header");
       // 35) Write a function to add an extra row to the table
       const addRow = function () {
         const tbody = document.querySelector("tbody");
@@ -244,7 +244,7 @@
         btn.onclick = function () {
           const imgs = document.querySelectorAll("img");
           imgs.forEach((img) => {
-            img.classList.add("d-none");
+            img.classList.add("image-hid");
           });
         };
         const body = document.querySelector("body");
@@ -258,7 +258,7 @@
         btn.innerText = "Toggle table";
         btn.onclick = function () {
           const table = document.querySelector("table");
-          table.classList.toggle("d-none");
+          table.classList.toggle("image-hid");
         };
 
         const body = document.querySelector("body");
@@ -296,7 +296,7 @@
         const tds = document.querySelectorAll("td");
         tds.forEach((td) => {
           td.onclick = function (e) {
-            e.target.classList.toggle("bg-red");
+            e.target.classList.toggle("red-background");
           };
         });
       };
@@ -329,8 +329,12 @@
         });
       };
 
+// 49) Write a function to create a table with 4 rows and 3 columns programmatically and add it to the bottom of the page
+       
 
+//50) Write a function to remove the last table from the page
 
+     
 
       </script>
       
