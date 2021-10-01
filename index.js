@@ -73,7 +73,7 @@ let randomNumbers = [];
       function returnLongest(array1, array2) {
         return array1.length >= array2.length ? array1 : array2;
       }
-      console.log(returnLongest([1, 2], [1, 2, 3]));
+      console.log(returnLongest([1, 2, 3, 4, 5], [3, 4, 5]));
 
 // 30) Create a function that gets 2 arrays of numbers as parameters and returns the one with the higher sum of values
 
